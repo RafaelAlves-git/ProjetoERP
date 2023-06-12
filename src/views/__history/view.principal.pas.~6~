@@ -1,0 +1,41 @@
+unit view.principal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, view.base, Vcl.ExtCtrls;
+
+type
+  TViewPrincipal = class(TViewBase)
+    pnTop: TPanel;
+    pnConteudo: TPanel;
+    pnMenu: TPanel;
+    procedure FormCreate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  ViewPrincipal: TViewPrincipal;
+  Color_00: TColor = $00FFFFFF; //Branco
+  Color_01: TColor = $00333333; //Dark
+  Color_02: TColor = $00666666;
+  Color_03: TColor = $00D8BFD8;
+
+implementation
+
+{$R *.dfm}
+
+procedure TViewPrincipal.FormCreate(Sender: TObject);
+begin
+  pnTop.Color  := Color_01;
+  pnMenu.Color := Color_01;
+
+  pnTop.Font.Color  := Color_00;
+  pnMenu.Font.Color := Color_00;
+end;
+
+end.

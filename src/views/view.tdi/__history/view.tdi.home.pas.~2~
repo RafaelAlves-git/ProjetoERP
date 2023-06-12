@@ -1,0 +1,24 @@
+unit view.tdi.home;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, view.base.tdi, view.tdi.base;
+
+type
+  TViewHomeTDI = class(TViewBaseTDI)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  ViewHomeTDI: TViewHomeTDI;
+
+implementation
+
+{$R *.dfm}
+
+end.

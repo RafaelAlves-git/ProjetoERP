@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/12/26 18:02:51.000.102,=C:\Users\alves\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/06/08 15:48:23.000.098,=C:\Users\alves\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/06/08 15:49:52.000.536,C:\Users\alves\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\git\ProjetoERP\src\views\view.principal.dfm</Transaction>
+    <Transaction>2023/06/08 15:49:52.000.536,C:\Users\alves\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\git\ProjetoERP\src\views\view.principal.pas</Transaction>
+    <Transaction>2023/06/08 15:50:18.000.417,C:\Users\alves\Documents\Embarcadero\Studio\Projects\Project4.dproj=C:\git\ProjetoERP\ProjetoERP.dproj</Transaction>
+    <Transaction>2023/06/08 16:08:37.000.854,=C:\git\ProjetoERP\Unit1.pas</Transaction>
+    <Transaction>2023/06/08 16:09:21.000.292,C:\git\ProjetoERP\Unit1.dfm=C:\git\ProjetoERP\src\views\view.base.dfm</Transaction>
+    <Transaction>2023/06/08 16:09:21.000.292,C:\git\ProjetoERP\Unit1.pas=C:\git\ProjetoERP\src\views\view.base.pas</Transaction>
+    <Transaction>2023/06/08 16:41:29.000.824,=C:\git\ProjetoERP\Unit1.pas</Transaction>
+    <Transaction>2023/06/08 16:45:06.000.426,C:\git\ProjetoERP\Unit1.dfm=C:\git\ProjetoERP\src\views\tdi\view.base.tdi.dfm</Transaction>
+    <Transaction>2023/06/08 16:45:06.000.426,C:\git\ProjetoERP\Unit1.pas=C:\git\ProjetoERP\src\views\tdi\view.base.tdi.pas</Transaction>
+    <Transaction>2023/06/08 16:45:25.000.239,=C:\git\ProjetoERP\Unit1.pas</Transaction>
+    <Transaction>2023/06/08 16:45:43.000.756,C:\git\ProjetoERP\Unit1.dfm=C:\git\ProjetoERP\src\views\tdi\view.filial.tdi.dfm</Transaction>
+    <Transaction>2023/06/08 16:45:43.000.756,C:\git\ProjetoERP\Unit1.pas=C:\git\ProjetoERP\src\views\tdi\view.filial.tdi.pas</Transaction>
+    <Transaction>2023/06/08 16:47:12.000.249,=C:\git\ProjetoERP\src\terceiros\TDI\PageControlEx.pas</Transaction>
+    <Transaction>2023/06/08 16:47:12.000.368,=C:\git\ProjetoERP\src\terceiros\TDI\VisualizaImagensDasGuiasAbertas.pas</Transaction>
+    <Transaction>2023/06/08 16:47:12.000.296,=C:\git\ProjetoERP\src\terceiros\TDI\TabCloseButton.pas</Transaction>
+    <Transaction>2023/06/08 16:47:12.000.331,=C:\git\ProjetoERP\src\terceiros\TDI\TDI.pas</Transaction>
+    <Transaction>2023/06/08 16:54:26.000.998,=C:\git\ProjetoERP\Unit1.pas</Transaction>
+    <Transaction>2023/06/08 16:54:47.000.072,C:\git\ProjetoERP\Unit1.pas=C:\git\ProjetoERP\src\views\tdi\view.home.tdi.pas</Transaction>
+    <Transaction>2023/06/08 16:54:47.000.072,C:\git\ProjetoERP\Unit1.dfm=C:\git\ProjetoERP\src\views\tdi\view.home.tdi.dfm</Transaction>
+    <Transaction>2023/06/11 18:47:53.303,C:\git\ProjetoERP\src\views\view.modal\view.base.dfm=C:\git\ProjetoERP\src\views\view.base.dfm</Transaction>
+    <Transaction>2023/06/11 18:47:53.303,C:\git\ProjetoERP\src\views\view.modal\view.base.pas=C:\git\ProjetoERP\src\views\view.base.pas</Transaction>
+    <Transaction>2023/06/11 18:48:14.278,C:\git\ProjetoERP\src\views\view.modal\view.principal.dfm=C:\git\ProjetoERP\src\views\view.principal.dfm</Transaction>
+    <Transaction>2023/06/11 18:48:14.278,C:\git\ProjetoERP\src\views\view.modal\view.principal.pas=C:\git\ProjetoERP\src\views\view.principal.pas</Transaction>
+    <Transaction>2023/06/11 18:48:52.756,C:\git\ProjetoERP\src\views\view.tdi\view.tdi.base.dfm=C:\git\ProjetoERP\src\views\tdi\view.base.tdi.dfm</Transaction>
+    <Transaction>2023/06/11 18:48:52.756,C:\git\ProjetoERP\src\views\view.tdi\view.tdi.base.pas=C:\git\ProjetoERP\src\views\tdi\view.base.tdi.pas</Transaction>
+    <Transaction>2023/06/11 18:49:14.635,C:\git\ProjetoERP\src\views\view.tdi\view.tdi.filial.pas=C:\git\ProjetoERP\src\views\tdi\view.filial.tdi.pas</Transaction>
+    <Transaction>2023/06/11 18:49:14.635,C:\git\ProjetoERP\src\views\view.tdi\view.tdi.filial.dfm=C:\git\ProjetoERP\src\views\tdi\view.filial.tdi.dfm</Transaction>
+    <Transaction>2023/06/11 18:49:36.153,C:\git\ProjetoERP\src\views\view.tdi\view.tdi.home.dfm=C:\git\ProjetoERP\src\views\tdi\view.home.tdi.dfm</Transaction>
+    <Transaction>2023/06/11 18:49:36.153,C:\git\ProjetoERP\src\views\view.tdi\view.tdi.home.pas=C:\git\ProjetoERP\src\views\tdi\view.home.tdi.pas</Transaction>
+  </Transactions>
+</BorlandProject>

@@ -1,0 +1,18 @@
+program ProjetoERP;
+
+uses
+  Vcl.Forms,
+  view.principal in 'src\views\view.principal.pas' {ViewPrincipal},
+  view.base in 'src\views\view.base.pas' {ViewBase},
+  view.base.tdi in 'src\views\tdi\view.base.tdi.pas' {ViewBase1};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TViewPrincipal, ViewPrincipal);
+  Application.CreateForm(TViewBase, ViewBase);
+  Application.CreateForm(TViewBase1, ViewBase1);
+  Application.Run;
+end.

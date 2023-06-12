@@ -1,0 +1,32 @@
+unit view.tdi.base;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, view.base, Vcl.ExtCtrls, view.principal;
+
+type
+  TViewBaseTDI = class(TViewBase)
+    pnBackground: TPanel;
+    procedure FormShow(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  ViewBaseTDI: TViewBaseTDI;
+
+implementation
+
+{$R *.dfm}
+
+procedure TViewBaseTDI.FormShow(Sender: TObject);
+begin
+  inherited;
+  pnBackground.Color := Color_00;
+end;
+
+end.

@@ -1,0 +1,5 @@
+inherited ViewHomeTDI: TViewHomeTDI
+  Caption = 'Home'
+  PixelsPerInch = 96
+  TextHeight = 21
+end

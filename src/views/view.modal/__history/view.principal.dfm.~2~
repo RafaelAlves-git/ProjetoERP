@@ -1,0 +1,203 @@
+object ViewPrincipal: TViewPrincipal
+  Left = 0
+  Top = 0
+  BorderStyle = bsSingle
+  Caption = 'ProjetoERP'
+  ClientHeight = 475
+  ClientWidth = 806
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poMainFormCenter
+  PrintScale = poNone
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object pnTop: TPanel
+    Left = 0
+    Top = 0
+    Width = 806
+    Height = 34
+    Align = alTop
+    Alignment = taLeftJustify
+    BevelOuter = bvNone
+    Color = 2894892
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWhite
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentBackground = False
+    ParentFont = False
+    TabOrder = 0
+    ExplicitWidth = 812
+    object pnLogo: TPanel
+      Left = 0
+      Top = 0
+      Width = 185
+      Height = 34
+      Align = alLeft
+      BevelOuter = bvNone
+      TabOrder = 0
+      ExplicitLeft = 312
+      ExplicitTop = -8
+      ExplicitHeight = 41
+      object imgLogo: TImage
+        Left = 0
+        Top = 0
+        Width = 32
+        Height = 34
+        Align = alLeft
+        AutoSize = True
+        Picture.Data = {
+          0954506E67496D61676589504E470D0A1A0A0000000D49484452000000200000
+          0020100600000023EAA6B700000006624B4744000000000000F943BB7F000000
+          0970485973000000600000006000F06B42CF0000000774494D4507E7060C0026
+          2B6D61B1E6000001194944415478DAED98310E82401045670BAD8C8D95F41EC0
+          56C19BE835B4321A0B3987DE44D0D603586B6761626944887F31011A1018E3CE
+          DFE23313B2997961D96414192EC55D00B75440D16A225CC1C7F02E777D25EB02
+          DFC2E71A808BC494BBC29AE56A0067242CF8303C1BD13A7057589ADE7DDA883C
+          F8450308E21715D6BF2AD5AF003012801747C601484A009806E0DDED1ED1D354
+          00C6FF0405800010000240000800019005C0340980F411B8D291BBAA0A155087
+          FA69009F919843373A854F3E3DE8CE5D6D8972A841ADD077D4A65E9C3D6B006B
+          2466DC75D6AC75722CBE844FE056814D7F59FA4BDFC017D5DF7779AFD9BAAF65
+          0120000440190DEA19DBA0B242B3E5038FC30D40CFD9EDAFF6CA2F0F00468577
+          7801430BD438954AC4570000000049454E44AE426082}
+      end
+      object lbProjetoERP: TLabel
+        Left = 40
+        Top = 0
+        Width = 85
+        Height = 21
+        Caption = 'ProjetoERP'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWhite
+        Font.Height = -16
+        Font.Name = 'Segoe UI'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object Label1: TLabel
+        Left = 40
+        Top = 20
+        Width = 65
+        Height = 12
+        Caption = 'by Rafael Alves'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWhite
+        Font.Height = -9
+        Font.Name = 'Segoe UI'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+    end
+    object pnUsuario: TPanel
+      Left = 621
+      Top = 0
+      Width = 185
+      Height = 34
+      Align = alRight
+      BevelOuter = bvNone
+      Caption = 'pnUsuario'
+      TabOrder = 1
+      ExplicitLeft = 312
+      ExplicitHeight = 41
+      object imgUsuario: TImage
+        Left = 153
+        Top = 0
+        Width = 32
+        Height = 34
+        Align = alRight
+        AutoSize = True
+        Picture.Data = {
+          0954506E67496D61676589504E470D0A1A0A0000000D49484452000000200000
+          0020100400000089E36E3C00000002624B47440000AA8D233200000009704859
+          73000000600000006000F06B42CF0000000774494D4507E7060C0027237AA108
+          95000003BE4944415478DAC5577D688D51187FDE5D4CD82291EFD2DA583E8BB0
+          52D8668449FCC1F8CB3F34996F6D584AA2D964C38AF68F948F22659AC46636FE
+          B1A434B77CB6E563B17F88DD88E1F57BCE39EFBD77EFFB9E7BDF77EE72EAF7D4
+          3DF7F9F89DF33EE779CE31E83F0FC3ABA24901C8C5C01260063005E80F0C003E
+          032F81A7402D701F8E7F27868049832177039B80B11EE9760227806A04F8D67B
+          0226AD853C0E8C53332F80EB403DD001BC53F3E31539DEA155C02435FF012844
+          905A7F04E47657003BD5CC23A018CAF73CADDFA46CC863C06CF14BEE4609EC7F
+          C52720835F015603DDC076E02C144DF57F32E466603D30555905818B400DF47E
+          283D76BD05A824992BE7818D613F310854A9A09F803550688AFA8FB7F926C924
+          741B4F8015B0E988B25904790D182676C210F9A421605201E425B5F23C5B705E
+          794B8CE0D124E685772242E2B6DA8965F8EF969380492990CF813162EB0C3A63
+          DB996D9027C9DB28827DB5CD7E2BE469E0ADF8740675D9091C823C4832E1E63A
+          BE9529563FC7238187B0CFB2D91BCAF72C92095D1E2160523FC56C3490ED9AED
+          A6603CC423812EF84875F1914BF208BF01D244B15204F2216F884F6050A6ABCB
+          4410907EB8966490CCB17A8B001F951D401926F6690CFFED1344FCF0D6EF058E
+          40A7D422F000723E908B89BB1AC322C8531E09389330E287ABE51DA0193A0B2D
+          025CBB4712975043341537C364B132A2997182F331E424FEA9F1C3659A4F5B1B
+          74D22C0221486E3A299808695DCB4254178384B310397D701E713E7D81DE508B
+          00171E3E09A9E1F3A977C0ED973BE3068A94626EC35CC06AB42B8FD873BDF90A
+          84A09B6211784FB29BE93F41A2864993219F01AF112BDD22D004B980B89D1AD4
+          E0C109EFC244B16372F08ADAE3AE5EDAE6912CCB3D9290B39BB3BC1C13C51AC3
+          E96ADB9792BC0D056C1ADC6A83CAF905F8096AFC709BDF031C85CE018B400E24
+          AFFC1526326C06594299C0D6DF6804F6C35F8BCD9F558864C55504B84BF1ED65
+          389083C946CC0D22792929241F574735FE0049242F235C0FB8F67F8F2AC57C93
+          E223D81DDD8C4A210F933C4ACB495E2EAD1B8D5F027622DC8456923CC2DC8C76
+          C163A5D08822C0E7B30D18017C0446017CB30DF80AA92761F9E41A91E96CC792
+          C43AC8CBE15FBD5F79AC910FAF75E15F2E57B256C8697D1098472B02F6BC51B9
+          101848F2FA3D21C1C1F9BE91EEA8159A6B399F8AC709DC097D838AF3302923D9
+          BB937A199813B002414AB41A1E9E66FC2A3A47241E1B5E8970E066A000013A63
+          6AFA789C72BBE6F7023F58D249B66FEB8872403E56EDC055A02AEE9BD03781BE
+          1A7F013A81FD2165D350DA0000000049454E44AE426082}
+        ExplicitLeft = 788
+        ExplicitHeight = 32
+      end
+    end
+  end
+  object pnConteudo: TPanel
+    Left = 0
+    Top = 34
+    Width = 806
+    Height = 441
+    Align = alClient
+    BevelOuter = bvNone
+    ParentBackground = False
+    TabOrder = 1
+    ExplicitTop = 41
+    ExplicitWidth = 812
+    ExplicitHeight = 463
+    object pnMenu: TPanel
+      Left = 0
+      Top = 0
+      Width = 185
+      Height = 441
+      Align = alLeft
+      BevelOuter = bvNone
+      Color = 3355443
+      ParentBackground = False
+      TabOrder = 0
+      ExplicitHeight = 463
+      object Button1: TButton
+        Left = 56
+        Top = 40
+        Width = 75
+        Height = 25
+        Caption = 'Button1'
+        TabOrder = 0
+      end
+    end
+    object pnTDI: TPanel
+      Left = 185
+      Top = 0
+      Width = 621
+      Height = 441
+      Align = alClient
+      Color = 6710886
+      ParentBackground = False
+      TabOrder = 1
+      ExplicitLeft = 191
+      ExplicitTop = 6
+      ExplicitWidth = 627
+      ExplicitHeight = 470
+    end
+  end
+end

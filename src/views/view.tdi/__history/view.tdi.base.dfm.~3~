@@ -1,0 +1,21 @@
+inherited ViewBaseTDI: TViewBaseTDI
+  Caption = 'ViewBaseTDI'
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 21
+  object pnBackground: TPanel
+    Left = 0
+    Top = 0
+    Width = 521
+    Height = 411
+    Align = alClient
+    BevelOuter = bvNone
+    Color = clWhite
+    ParentBackground = False
+    TabOrder = 0
+    ExplicitLeft = 176
+    ExplicitTop = 208
+    ExplicitWidth = 185
+    ExplicitHeight = 41
+  end
+end
