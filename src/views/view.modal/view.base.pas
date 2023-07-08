@@ -4,12 +4,13 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, provider.imageList;
 
 type
   TViewBase = class(TForm)
   private
-    { Private declarations }
+    published
+      TImageList: TProviderImageList;
   public
     { Public declarations }
   end;

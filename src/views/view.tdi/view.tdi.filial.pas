@@ -4,10 +4,11 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, view.tdi.base, Vcl.ExtCtrls;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, view.tdi.base, Vcl.ExtCtrls,
+  view.tdi.baseCadastro;
 
 type
-  TViewFilialTDI = class(TViewBaseTDI)
+  TViewFilialTDI = class(TViewBaseCadastroTDI)
   private
     { Private declarations }
   public

@@ -1,0 +1,10 @@
+unit providers.constantes;
+
+interface
+
+const
+  Abrir_Varios_Forms = true;
+
+implementation
+
+end.

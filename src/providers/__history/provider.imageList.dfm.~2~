@@ -1,0 +1,36 @@
+object ViewImageList: TViewImageList
+  Left = 0
+  Top = 0
+  Caption = 'ViewImageList'
+  ClientHeight = 201
+  ClientWidth = 217
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object ImageList_16: TImageList
+    ColorDepth = cd32Bit
+    DrawingStyle = dsTransparent
+    Left = 56
+    Top = 16
+  end
+  object ImageList_32: TImageList
+    ColorDepth = cd32Bit
+    DrawingStyle = dsTransparent
+    Height = 32
+    Left = 56
+    Top = 72
+  end
+  object ImageList_48: TImageList
+    ColorDepth = cd32Bit
+    DrawingStyle = dsTransparent
+    Height = 48
+    Left = 56
+    Top = 128
+  end
+end

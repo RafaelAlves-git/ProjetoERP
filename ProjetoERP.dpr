@@ -10,7 +10,10 @@ uses
   TabCloseButton in 'src\terceiros\TDI\TabCloseButton.pas',
   TDI in 'src\terceiros\TDI\TDI.pas',
   VisualizaImagensDasGuiasAbertas in 'src\terceiros\TDI\VisualizaImagensDasGuiasAbertas.pas',
-  view.tdi.home in 'src\views\view.tdi\view.tdi.home.pas' {ViewHomeTDI};
+  view.tdi.home in 'src\views\view.tdi\view.tdi.home.pas' {ViewHomeTDI},
+  provider.constantes in 'src\providers\constants\provider.constantes.pas',
+  provider.imageList in 'src\providers\provider.imageList.pas' {ProviderImageList},
+  view.tdi.baseCadastro in 'src\views\view.tdi\view.tdi.baseCadastro.pas' {ViewBaseCadastroTDI};
 
 {$R *.res}
 
@@ -18,6 +21,6 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TViewPrincipal, ViewPrincipal);
-  Application.CreateForm(TViewHomeTDI, ViewHomeTDI);
+  Application.CreateForm(TViewBaseCadastroTDI, ViewBaseCadastroTDI);
   Application.Run;
 end.

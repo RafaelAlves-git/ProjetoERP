@@ -5,7 +5,9 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, view.base, Vcl.ExtCtrls, Vcl.StdCtrls,
-  TDI, view.tdi.base, view.tdi.home, Vcl.Imaging.pngimage, view.tdi.filial;
+  TDI, view.tdi.base, view.tdi.home, Vcl.Imaging.pngimage, view.tdi.filial,
+  provider.constantes, Vcl.Buttons, provider.imageList, System.Actions,
+  Vcl.ActnList;
 
 type
   TViewPrincipal = class(TViewBase)
@@ -13,7 +15,6 @@ type
     pnConteudo: TPanel;
     pnMenu: TPanel;
     pnTDI: TPanel;
-    Button1: TButton;
     imgLogoBranco: TImage;
     imgUsuarioBranco: TImage;
     pnLogo: TPanel;
@@ -24,7 +25,58 @@ type
     imgUsuarioColorido: TImage;
     lbNomeUsuario: TLabel;
     lbTipoUsuario: TLabel;
-    Button2: TButton;
+    ActionList1: TActionList;
+    act_Home: TAction;
+    act_Sair: TAction;
+    act_Config: TAction;
+    pnFilial: TPanel;
+    Image1: TImage;
+    Label1: TLabel;
+    act_Filial: TAction;
+    act_Clientes: TAction;
+    act_Fornecedores: TAction;
+    act_Caixa: TAction;
+    act_Grupo: TAction;
+    act_SubGrupo: TAction;
+    act_Vendas: TAction;
+    pnClientes: TPanel;
+    Image2: TImage;
+    Label2: TLabel;
+    pnFornecedores: TPanel;
+    Image3: TImage;
+    Label3: TLabel;
+    pnCaixa: TPanel;
+    Image4: TImage;
+    Label4: TLabel;
+    pnGrupo: TPanel;
+    Image5: TImage;
+    Label5: TLabel;
+    pnSubGrupo: TPanel;
+    Image6: TImage;
+    Label6: TLabel;
+    pnVendas: TPanel;
+    Image7: TImage;
+    Label7: TLabel;
+    pnConfig: TPanel;
+    Image8: TImage;
+    Label8: TLabel;
+    pnSair: TPanel;
+    imgSair: TImage;
+    lbSair: TLabel;
+    btnFilial: TSpeedButton;
+    btnClientes: TSpeedButton;
+    btnFornecedores: TSpeedButton;
+    btnCaixa: TSpeedButton;
+    btnVendas: TSpeedButton;
+    btnGrupo: TSpeedButton;
+    btnSubGrupo: TSpeedButton;
+    btnConfiguracoes: TSpeedButton;
+    btnSair: TSpeedButton;
+    pnProdutos: TPanel;
+    Image9: TImage;
+    Label9: TLabel;
+    btnProdutos: TSpeedButton;
+    act_Produtos: TAction;
     procedure FormCreate(Sender: TObject);
     procedure imgLogoColoridoMouseLeave(Sender: TObject);
     procedure imgLogoBrancoMouseEnter(Sender: TObject);
@@ -32,6 +84,18 @@ type
     procedure imgUsuarioColoridoMouseLeave(Sender: TObject);
     procedure imgLogoColoridoClick(Sender: TObject);
     procedure Button2Click(Sender: TObject);
+    procedure btnSairClick(Sender: TObject);
+    procedure act_HomeExecute(Sender: TObject);
+    procedure act_SairExecute(Sender: TObject);
+    procedure act_ConfigExecute(Sender: TObject);
+    procedure act_FilialExecute(Sender: TObject);
+    procedure act_ClientesExecute(Sender: TObject);
+    procedure act_FornecedoresExecute(Sender: TObject);
+    procedure act_CaixaExecute(Sender: TObject);
+    procedure act_GrupoExecute(Sender: TObject);
+    procedure act_SubGrupoExecute(Sender: TObject);
+    procedure act_VendasExecute(Sender: TObject);
+    procedure act_ProdutosExecute(Sender: TObject);
   private
     { Private declarations }
   public
@@ -54,7 +118,7 @@ implementation
 procedure TViewPrincipal.Button2Click(Sender: TObject);
 begin
   inherited;
-  FTDI.MostrarFormulario(TViewFilialTDI, True);
+  FTDI.MostrarFormulario(TViewFilialTDI, Abrir_Varios_Forms);
 end;
 
 procedure TViewPrincipal.FormCreate(Sender: TObject);
@@ -70,7 +134,6 @@ begin
   // Inicializando a TDI
   FTDI := TTDI.Create(pnTDI, TViewHomeTDI );
   FTDI.MostrarMenuPopup := False
-
 end;
 
 procedure TViewPrincipal.imgLogoBrancoMouseEnter(Sender: TObject);
@@ -105,6 +168,78 @@ begin
   inherited;
   imgUsuarioBranco.Visible   := True;
   imgUsuarioColorido.Visible := False;
+end;
+
+procedure TViewPrincipal.act_CaixaExecute(Sender: TObject);
+begin  //Caixa
+  inherited;
+
+end;
+
+procedure TViewPrincipal.act_ClientesExecute(Sender: TObject);
+begin //Clientes
+  inherited;
+
+end;
+
+procedure TViewPrincipal.act_ConfigExecute(Sender: TObject);
+begin //Config
+  inherited;
+
+end;
+
+procedure TViewPrincipal.act_FilialExecute(Sender: TObject);
+begin //Filial
+  inherited;
+  FTDI.MostrarFormulario(TViewFilialTDI, Abrir_Varios_Forms)
+end;
+
+procedure TViewPrincipal.act_FornecedoresExecute(Sender: TObject);
+begin  //Fornecedores
+  inherited;
+
+end;
+
+procedure TViewPrincipal.act_GrupoExecute(Sender: TObject);
+begin //Grupo
+  inherited;
+
+end;
+
+procedure TViewPrincipal.act_HomeExecute(Sender: TObject);
+begin //Home
+  inherited;
+   FTDI.MostrarFormulario(TViewHomeTDI, Abrir_Varios_Forms);
+end;
+
+procedure TViewPrincipal.act_ProdutosExecute(Sender: TObject);
+begin //Produtos
+  inherited;
+
+end;
+
+procedure TViewPrincipal.act_SairExecute(Sender: TObject);
+begin //Sair
+  inherited;
+  Application.Terminate;
+end;
+
+procedure TViewPrincipal.act_SubGrupoExecute(Sender: TObject);
+begin //SubGrupo
+  inherited;
+
+end;
+
+procedure TViewPrincipal.act_VendasExecute(Sender: TObject);
+begin //Vendas
+  inherited;
+
+end;
+
+procedure TViewPrincipal.btnSairClick(Sender: TObject);
+begin
+  inherited;
+    Application.Terminate;
 end;
 
 end.

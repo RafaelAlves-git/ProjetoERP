@@ -1,0 +1,24 @@
+unit provider.imageList;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs;
+
+type
+  TViewImageList = class(TForm)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  ViewImageList: TViewImageList;
+
+implementation
+
+{$R *.dfm}
+
+end.

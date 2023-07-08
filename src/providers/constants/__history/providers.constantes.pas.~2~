@@ -1,0 +1,17 @@
+unit providers.constantes;
+
+interface
+
+const
+  Abrir_Varios_Forms = true;
+
+
+  Color_00: TColor = $00FFFFFF; //Branco
+  Color_01: TColor = $00333333; //Dark
+  Color_02: TColor = $00666666;
+  Color_03: TColor = $00D8BFD8;
+  Color_04: TColor = $002C2C2C; //Dark2
+  Color_05: TColor = $008EA201; // Verde Projeto - #01A28E
+implementation
+
+end.
