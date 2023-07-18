@@ -1,0 +1,169 @@
+unit view.login;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.Imaging.pngimage,
+  Vcl.StdCtrls;
+
+type
+  TfrmLogin = class(TForm)
+    pnPrincipal: TPanel;
+    pnLogin: TPanel;
+    imgLogin: TImage;
+    Label1: TLabel;
+    pnConfirmar: TPanel;
+    Label2: TLabel;
+    pnBarra: TPanel;
+    pnSenha: TPanel;
+    edtSenha: TEdit;
+    pnBarraSenha: TPanel;
+    pnSair: TPanel;
+    Image1: TImage;
+    pnUsuario: TPanel;
+    Image2: TImage;
+    edtUsuario: TEdit;
+    pnBarraUsuario: TPanel;
+    procedure pnSairClick(Sender: TObject);
+    procedure pnConfirmarClick(Sender: TObject);
+    procedure edtUsuarioEnter(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure edtUsuarioExit(Sender: TObject);
+    procedure edtSenhaEnter(Sender: TObject);
+    procedure edtSenhaExit(Sender: TObject);
+    procedure pnConfirmarMouseEnter(Sender: TObject);
+    procedure pnConfirmarMouseLeave(Sender: TObject);
+    procedure edtUsuarioKeyPress(Sender: TObject; var Key: Char);
+    procedure edtSenhaKeyPress(Sender: TObject; var Key: Char);
+    procedure pnSairMouseEnter(Sender: TObject);
+    procedure pnSairMouseLeave(Sender: TObject);
+
+    function VerificaLogin(): Boolean;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmLogin: TfrmLogin;
+
+implementation
+
+{$R *.dfm}
+
+uses service.conexao, view.principal;
+
+procedure TfrmLogin.edtSenhaEnter(Sender: TObject);
+begin
+  if edtSenha.Text = 'Digite sua Senha' then
+    edtSenha.Text := '';
+
+  pnBarraSenha.Color := clBlue;
+end;
+
+procedure TfrmLogin.edtSenhaExit(Sender: TObject);
+begin
+  if edtSenha.Text = '' then
+    edtSenha.Text := 'Digite sua Senha';
+
+  pnBarraSenha.Color := clBlack;
+end;
+
+procedure TfrmLogin.edtSenhaKeyPress(Sender: TObject; var Key: Char);
+begin
+  if key = #13 then
+    begin
+      key := #0;
+      pnConfirmarClick(Self);
+    end;
+end;
+
+procedure TfrmLogin.edtUsuarioEnter(Sender: TObject);
+begin
+  if edtUsuario.Text = 'Digite seu Usuário' then
+    edtUsuario.Text := '';
+
+  pnBarraUsuario.Color := clBlue;
+end;
+
+procedure TfrmLogin.edtUsuarioExit(Sender: TObject);
+begin
+  if edtUsuario.Text = '' then
+    edtUsuario.Text := 'Digite seu Usuário';
+
+  pnBarraUsuario.Color := clBlack;
+end;
+
+procedure TfrmLogin.edtUsuarioKeyPress(Sender: TObject; var Key: Char);
+begin
+  if key = #13 then
+    begin
+      key := #0;
+      edtSenha.SetFocus;
+    end;
+end;
+
+procedure TfrmLogin.FormShow(Sender: TObject);
+begin
+  edtUsuario.SetFocus;
+end;
+
+procedure TfrmLogin.pnConfirmarClick(Sender: TObject);
+begin
+  if VerificaLogin then
+    begin
+      Application.CreateForm(TViewPrincipal, ViewPrincipal);
+      frmLogin.Hide;
+      ViewPrincipal.ShowModal;
+    end
+  else
+    Application.MessageBox('Usuário ou Senha Inválido','Erro',MB_OK+MB_ICONERROR);
+end;
+
+procedure TfrmLogin.pnConfirmarMouseEnter(Sender: TObject);
+begin
+  pnConfirmar.Color := $00578B2E;
+end;
+
+procedure TfrmLogin.pnConfirmarMouseLeave(Sender: TObject);
+begin
+  pnConfirmar.Color := $00333333;
+end;
+
+procedure TfrmLogin.pnSairClick(Sender: TObject);
+begin
+  Close;
+end;
+
+procedure TfrmLogin.pnSairMouseEnter(Sender: TObject);
+begin
+  pnSair.Font.Color := clRed;
+end;
+
+procedure TfrmLogin.pnSairMouseLeave(Sender: TObject);
+begin
+  pnSair.Font.Color := clBlack;
+end;
+
+
+function TfrmLogin.VerificaLogin: Boolean;
+begin
+  with ServiceConexao do
+    begin
+      qrLogin.Close;
+      qrLogin.SQL.Clear;
+      qrLogin.SQL.Add('SELECT * FROM USUARIOS'+
+                      ' WHERE (CODIGO = '+QuotedStr(edtUsuario.Text)+' OR USUARIO = '+QuotedStr(edtUsuario.Text)+')'+
+                      ' AND (SENHA = '+QuotedStr(edtSenha.Text)+')');
+      qrLogin.Open;
+
+      if qrLogin.isEmpty then
+        Result := False
+      else
+        Result := True;
+    end;
+end;
+
+end.

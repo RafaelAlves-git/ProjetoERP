@@ -1,0 +1,16 @@
+inherited ServiceCadastro: TServiceCadastro
+  Height = 479
+  Width = 1117
+  inherited FDScript: TFDScript
+    Left = 40
+    Top = 88
+  end
+  inherited FBDriverLink: TFDPhysFBDriverLink
+    Left = 1048
+    Top = 24
+  end
+  inherited WaitCursor: TFDGUIxWaitCursor
+    Left = 1048
+    Top = 88
+  end
+end

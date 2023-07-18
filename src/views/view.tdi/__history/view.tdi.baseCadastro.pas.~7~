@@ -1,0 +1,41 @@
+unit view.tdi.baseCadastro;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, view.tdi.base, Vcl.ExtCtrls,
+  Vcl.WinXPanels, Vcl.StdCtrls;
+
+type
+  TViewBaseCadastroTDI = class(TViewBaseTDI)
+    cpCadastro: TCardPanel;
+    cardConsulta: TCard;
+    cardCadastro: TCard;
+    pnButtons: TPanel;
+    pnTituloConsulta: TPanel;
+    lbTituloConsulta: TLabel;
+    pnTituloCadastro: TPanel;
+    lbTituloCadastro: TLabel;
+    Panel1: TPanel;
+    procedure FormShow(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  ViewBaseCadastroTDI: TViewBaseCadastroTDI;
+
+implementation
+
+{$R *.dfm}
+
+procedure TViewBaseCadastroTDI.FormShow(Sender: TObject);
+begin
+  inherited;
+  cpCadastro.ActiveCard := cardConsulta;
+end;
+
+end.

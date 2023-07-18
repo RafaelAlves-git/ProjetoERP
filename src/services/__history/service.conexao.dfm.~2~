@@ -1,0 +1,34 @@
+inherited ServiceConexao: TServiceConexao
+  Height = 354
+  Width = 470
+  object FDCon: TFDConnection
+    Params.Strings = (
+      'Database=C:\git\ProjetoERP\BANCOPROJETOERP.FDB'
+      'User_Name=SYSDBA'
+      'Password=masterkey'
+      'Server=localhost'
+      'Port=3050'
+      'CharacterSet=WIN1252'
+      'DriverID=FB')
+    LoginPrompt = False
+    Left = 40
+    Top = 24
+  end
+  object FDScript: TFDScript
+    SQLScripts = <>
+    Connection = FDCon
+    Params = <>
+    Macros = <>
+    Left = 296
+    Top = 24
+  end
+  object FBDriverLink: TFDPhysFBDriverLink
+    Left = 304
+    Top = 88
+  end
+  object WaitCursor: TFDGUIxWaitCursor
+    Provider = 'Forms'
+    Left = 304
+    Top = 168
+  end
+end

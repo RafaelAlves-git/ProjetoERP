@@ -7,7 +7,8 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, view.base, Vcl.ExtCtrls, Vcl.StdCtrls,
   TDI, view.tdi.base, view.tdi.home, Vcl.Imaging.pngimage, view.tdi.filial,
   provider.constantes, Vcl.Buttons, provider.imageList, System.Actions,
-  Vcl.ActnList;
+  Vcl.ActnList, UCBase, UCDataConnector, UCFireDACConn, service.conexao,
+  UCSettings, view.login;
 
 type
   TViewPrincipal = class(TViewBase)
@@ -25,7 +26,7 @@ type
     imgUsuarioColorido: TImage;
     lbNomeUsuario: TLabel;
     lbTipoUsuario: TLabel;
-    ActionList1: TActionList;
+    ActionList: TActionList;
     act_Home: TAction;
     act_Sair: TAction;
     act_Config: TAction;
@@ -96,6 +97,7 @@ type
     procedure act_SubGrupoExecute(Sender: TObject);
     procedure act_VendasExecute(Sender: TObject);
     procedure act_ProdutosExecute(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -121,6 +123,12 @@ begin
   FTDI.MostrarFormulario(TViewFilialTDI, Abrir_Varios_Forms);
 end;
 
+procedure TViewPrincipal.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  inherited;
+  frmLogin.Close;
+end;
+
 procedure TViewPrincipal.FormCreate(Sender: TObject);
 begin
   // Style do Formulario
@@ -133,7 +141,14 @@ begin
 
   // Inicializando a TDI
   FTDI := TTDI.Create(pnTDI, TViewHomeTDI );
-  FTDI.MostrarMenuPopup := False
+  FTDI.MostrarMenuPopup := False;
+
+  //Usuario
+  lbNomeUsuario.Caption := ServiceConexao.qrLogin.FieldByName('USUARIO').AsString;
+  if ServiceConexao.qrLogin.FieldByName('ADMINISTRADOR').AsBoolean then
+    lbTipoUsuario.Caption := 'Administrador'
+  else
+    lbTipoUsuario.Caption := 'Operador';
 end;
 
 procedure TViewPrincipal.imgLogoBrancoMouseEnter(Sender: TObject);

@@ -10,11 +10,10 @@ object ViewPrincipal: TViewPrincipal
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
   Position = poMainFormCenter
   PrintScale = poNone
+  OnClose = FormClose
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object pnTop: TPanel
     Left = 0
@@ -33,7 +32,6 @@ object ViewPrincipal: TViewPrincipal
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 843
     object pnLogo: TPanel
       Left = 0
       Top = 0
@@ -129,7 +127,6 @@ object ViewPrincipal: TViewPrincipal
       Align = alRight
       BevelOuter = bvNone
       TabOrder = 1
-      ExplicitLeft = 693
       object imgUsuarioColorido: TImage
         Left = 115
         Top = 0
@@ -221,8 +218,6 @@ object ViewPrincipal: TViewPrincipal
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
-    ExplicitWidth = 843
-    ExplicitHeight = 534
     object pnMenu: TPanel
       Left = 0
       Top = 0
@@ -233,7 +228,6 @@ object ViewPrincipal: TViewPrincipal
       Color = 3355443
       ParentBackground = False
       TabOrder = 0
-      ExplicitHeight = 534
       object pnFilial: TPanel
         Left = 0
         Top = 0
@@ -467,8 +461,6 @@ object ViewPrincipal: TViewPrincipal
         Align = alTop
         BevelOuter = bvNone
         TabOrder = 4
-        ExplicitLeft = -6
-        ExplicitTop = 239
         object Image5: TImage
           Left = 0
           Top = 0
@@ -526,7 +518,6 @@ object ViewPrincipal: TViewPrincipal
         Align = alTop
         BevelOuter = bvNone
         TabOrder = 5
-        ExplicitTop = 300
         object Image6: TImage
           Left = 0
           Top = 0
@@ -640,8 +631,6 @@ object ViewPrincipal: TViewPrincipal
         Align = alBottom
         BevelOuter = bvNone
         TabOrder = 7
-        ExplicitLeft = 3
-        ExplicitTop = 390
         object Image8: TImage
           Left = 0
           Top = 0
@@ -713,7 +702,6 @@ object ViewPrincipal: TViewPrincipal
         Align = alBottom
         BevelOuter = bvNone
         TabOrder = 8
-        ExplicitTop = 418
         object imgSair: TImage
           Left = 0
           Top = 0
@@ -826,14 +814,12 @@ object ViewPrincipal: TViewPrincipal
       Color = 6710886
       ParentBackground = False
       TabOrder = 1
-      ExplicitWidth = 658
-      ExplicitHeight = 534
     end
   end
-  object ActionList1: TActionList
+  object ActionList: TActionList
     Images = ProviderImageList.ImageList_32
-    Left = 433
-    Top = 242
+    Left = 321
+    Top = 306
     object act_Home: TAction
       Caption = 'Home'
       OnExecute = act_HomeExecute
